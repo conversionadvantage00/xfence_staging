@@ -122,14 +122,8 @@ ul,ol{list-style:none}
 .hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero picture img{object-position:70% 50%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,29,24,.86) 0,rgba(10,29,24,.5) 42%,rgba(10,29,24,0) 72%),linear-gradient(0deg,rgba(10,29,24,.9) 0,rgba(10,29,24,0) 38%)}
-.hero-in{position:relative;z-index:1;width:100%;max-width:var(--max);margin:0 auto;padding:140px var(--pad) clamp(36px,5vw,64px);display:grid;gap:28px}
+.hero-in{position:relative;z-index:1;width:100%;max-width:var(--max);margin:0 auto;padding:140px var(--pad) clamp(48px,7vw,96px);display:grid;gap:28px}
 .hero-in .lead{color:#DCE5E1;max-width:46ch}
-.rail{position:relative;z-index:1;border-top:1px solid var(--rule-l);background:rgba(10,29,24,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.rail ul{display:grid;grid-template-columns:repeat(4,1fr);max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
-.rail li{padding:20px 24px 22px;border-left:1px solid var(--rule-l);display:grid;gap:2px}
-.rail li:first-child{border-left:0;padding-left:0}
-.rail b{font-family:var(--mono);font-weight:500;font-size:clamp(16px,1.5vw,20px)}
-.rail span{font-size:13.5px;color:#A9B8B1}
 
 /* statement */
 .state{display:grid;grid-template-columns:.34fr 1fr;gap:32px 64px;align-items:start}
@@ -282,12 +276,7 @@ ul,ol{list-style:none}
   .hero::after{background:linear-gradient(0deg,rgba(10,29,24,.97) 0,rgba(10,29,24,.8) 46%,rgba(10,29,24,.15) 76%,rgba(10,29,24,.45) 100%)}
   .hero-in{padding-top:120px;gap:22px}
   .hero .kicker{font-size:11px;letter-spacing:.1em}
-  .rail b{font-size:13px;letter-spacing:-.03em;white-space:nowrap}
   .hero .actions .btn{flex:1 1 100%}
-  .rail ul{grid-template-columns:1fr 1fr}
-  .rail li{padding:14px 16px}
-  .rail li:nth-child(odd){border-left:0;padding-left:0}
-  .rail li:nth-child(n+3){border-top:1px solid var(--rule-l)}
   .state{grid-template-columns:1fr;gap:20px}
   .facts{grid-column:1;grid-template-columns:1fr;gap:24px}
   .uses{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(var(--pad) * -1);padding:0 var(--pad) 8px;scrollbar-width:none}
@@ -352,14 +341,6 @@ ul,ol{list-style:none}
       <a class="btn" href="#quote">Build my quote <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost" href="#range">See the range</a>
     </div>
-  </div>
-  <div class="rail" aria-label="Panel specifications">
-    <ul>
-      <li><b>76 × 50 / 25 / 12.7 mm</b><span>Three mesh apertures</span></li>
-      <li><b>1.8 to 3.0 m</b><span>Four panel heights</span></li>
-      <li><b>4 mm × 4 mm</b><span>Horizontal and vertical wire</span></li>
-      <li><b>3 050 mm</b><span>Panel length, galvanized</span></li>
-    </ul>
   </div>
 </section>
 
