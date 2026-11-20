@@ -26,6 +26,9 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"X-Fence","description":"Manufacturer and supplier of Clear View fencing panels.","telephone":"+27440503803","email":"sales@xfence.co.za","address":{"@type":"PostalAddress","streetAddress":"14 Meul Street, George Industria","addressLocality":"George","addressRegion":"Western Cape","addressCountry":"ZA"},"areaServed":"ZA","url":"https://www.xfence.co.za/"}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Clear View fencing?", "acceptedAnswer": {"@type": "Answer", "text": "Clear View fencing is made from welded steel mesh panels with small openings. It gives you a strong boundary that you, your cameras and your guards can still see through, where a solid wall would block the view."}}, {"@type": "Question", "name": "Which mesh aperture should I choose?", "acceptedAnswer": {"@type": "Answer", "text": "The 76 × 50 mm mesh is the most open and suits homes, complexes and general perimeters. The 76 × 25 mm mesh is tighter and harder to grip. The 76 × 12.7 mm mesh is our tightest, for industrial and high-risk sites. If you are unsure, we will help you choose during a free consultation."}}, {"@type": "Question", "name": "What sizes do the panels come in?", "acceptedAnswer": {"@type": "Answer", "text": "Every panel is 3 050 mm long, in heights of 1 800, 2 100, 2 400 and 3 000 mm. All three apertures use 4 mm horizontal and vertical wires and come in a galvanized finish."}}, {"@type": "Question", "name": "Do you supply outside George?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We manufacture in George and supply projects anywhere in South Africa."}}, {"@type": "Question", "name": "How do I get a price?", "acceptedAnswer": {"@type": "Answer", "text": "Use the quote builder on this page, send us a WhatsApp or call the office. Tell us the fence length, height and aperture and we will confirm the panel count and send you a quote. The consultation is free."}}, {"@type": "Question", "name": "Will it work with my cameras and guards?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Because the mesh is see-through, cameras and patrols keep a clear line of sight along the boundary and through it."}}]}
+</script>
 <style>
 /* Layout idea: charcoal black and hard orange, as in the X-Fence artwork. One forward slant
    (the angle of the X) is reused for the hero panel, image tiles, buttons and lead-in marks.
@@ -264,6 +267,22 @@ ul,ol{list-style:none}
 .steps li>span{font-weight:600;font-size:15px;color:var(--orange)}
 .steps p{color:var(--muted);font-size:16.500px}
 
+/* faq */
+.faq{display:grid;grid-template-columns:.800fr 1.200fr;gap:clamp(32px,5vw,96px);align-items:start}
+.faq .head{margin:0;position:sticky;top:120px}
+.faq .d2{font-size:clamp(40px,5.200vw,84px)}
+.faq-list{border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px;padding:18px 0;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover h3{color:var(--orange-d)}
+.faq summary h3{transition:color .2s ease}
+.faq-x{position:relative;flex:none;width:22px;height:22px}
+.faq-x::before,.faq-x::after{content:"";position:absolute;left:0;right:0;top:9.500px;height:3px;background:var(--orange);transition:transform .3s var(--ease)}
+.faq-x::after{transform:rotate(90deg)}
+.faq details[open] .faq-x::after{transform:rotate(0)}
+.faq details p{padding:0 46px 26px 0;color:var(--muted);font-size:17px;line-height:1.6;max-width:62ch}
+
 /* contact */
 .contact{display:grid;grid-template-columns:1.100fr .900fr;gap:clamp(36px,6vw,112px);align-items:start}
 .tels{display:grid;border-top:1px solid var(--rule-l)}
@@ -305,7 +324,8 @@ html.js .rv.in{opacity:1;transform:none;transition:opacity .9s var(--ease) var(-
   .nav-tel{display:none}
   .hero-panel{clip-path:polygon(0 0,calc(76% + 5px) 0,calc(58% + 5px) 100%,0 100%)}
   .hero-panel::after{clip-path:polygon(0 0,76% 0,58% 100%,0 100%)}
-  .made,.qb,.contact{grid-template-columns:1fr}
+  .made,.qb,.contact,.faq{grid-template-columns:1fr}
+  .faq .head{position:static}
   .made-copy{position:static}
   .qb-form{grid-template-columns:1fr 1fr}
   .span3{grid-column:1/-1}
@@ -348,6 +368,8 @@ html.js .rv.in{opacity:1;transform:none;transition:opacity .9s var(--ease) var(-
   .use:first-child{margin-left:0}
   .band-in{padding:96px var(--pad)}
   .steps{grid-template-columns:1fr;gap:32px}
+  .faq summary{min-height:68px;padding:16px 0}
+  .faq details p{padding-right:0;font-size:16.500px}
   .seg{grid-template-columns:1fr 1fr}
   .seg.three{grid-template-columns:1fr}
   .seg.three span{flex-direction:row;justify-content:space-between;padding:6px 18px}
@@ -612,6 +634,24 @@ html.js .rv.in{opacity:1;transform:none;transition:opacity .9s var(--ease) var(-
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="sec on-bone" id="faq">
+  <div class="wrap faq">
+    <div class="head">
+      <span class="leadin">Questions</span>
+      <h2 class="d2">Asked before most quotes.</h2>
+    </div>
+    <div class="faq-list">
+      <details name="faq" open><summary><h3 class="d3">What is Clear View fencing?</h3><span class="faq-x" aria-hidden="true"></span></summary><p>Clear View fencing is made from welded steel mesh panels with small openings. It gives you a strong boundary that you, your cameras and your guards can still see through, where a solid wall would block the view.</p></details>
+      <details name="faq"><summary><h3 class="d3">Which mesh aperture should I choose?</h3><span class="faq-x" aria-hidden="true"></span></summary><p>The 76 × 50 mm mesh is the most open and suits homes, complexes and general perimeters. The 76 × 25 mm mesh is tighter and harder to grip. The 76 × 12.7 mm mesh is our tightest, for industrial and high-risk sites. If you are unsure, we will help you choose during a free consultation.</p></details>
+      <details name="faq"><summary><h3 class="d3">What sizes do the panels come in?</h3><span class="faq-x" aria-hidden="true"></span></summary><p>Every panel is 3 050 mm long, in heights of 1 800, 2 100, 2 400 and 3 000 mm. All three apertures use 4 mm horizontal and vertical wires and come in a galvanized finish.</p></details>
+      <details name="faq"><summary><h3 class="d3">Do you supply outside George?</h3><span class="faq-x" aria-hidden="true"></span></summary><p>Yes. We manufacture in George and supply projects anywhere in South Africa.</p></details>
+      <details name="faq"><summary><h3 class="d3">How do I get a price?</h3><span class="faq-x" aria-hidden="true"></span></summary><p>Use the quote builder on this page, send us a WhatsApp or call the office. Tell us the fence length, height and aperture and we will confirm the panel count and send you a quote. The consultation is free.</p></details>
+      <details name="faq"><summary><h3 class="d3">Will it work with my cameras and guards?</h3><span class="faq-x" aria-hidden="true"></span></summary><p>Yes. Because the mesh is see-through, cameras and patrols keep a clear line of sight along the boundary and through it.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- Contact -->
 <section class="sec on-dark" id="contact">
   <div class="wrap">
@@ -646,6 +686,7 @@ html.js .rv.in{opacity:1;transform:none;transition:opacity .9s var(--ease) var(-
       <a href="#uses">Applications</a>
       <a href="#made">Manufacturing</a>
       <a href="#quote">Quote builder</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <span>© <span id="yr">2026</span> X-Fence. George, South Africa.</span>
@@ -713,7 +754,7 @@ html.js .rv.in{opacity:1;transform:none;transition:opacity .9s var(--ease) var(-
   /* entrance and exit on scroll */
   if (!REDUCE && 'IntersectionObserver' in window){
     var groups = ['.state > *', '.facts li', '.head > *', '.apc', '.pbar', '.stage-wrap', '.ap-row > *', '.use', '.band-in > *',
-                  '.made-copy > *', '.made-pics figure', '.qb', '.steps li', '.tels a', '.where > div'];
+                  '.made-copy > *', '.made-pics figure', '.qb', '.steps li', '.faq details', '.tels a', '.where > div'];
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){ en.target.classList.toggle('in', en.isIntersecting); });
     }, { rootMargin: '-7% 0px -7% 0px' });
